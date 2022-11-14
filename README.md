@@ -27,3 +27,5 @@ Variables:
 heading and pos for each turtle, probably saved as name_heading and name_pos (unless we can get a function to do this without saving and individual variable for each turtle)
 race_winner 
 user_command (only checks for quit, anything else just goes)
+
+
