@@ -28,4 +28,28 @@ heading and pos for each turtle, probably saved as name_heading and name_pos (un
 race_winner 
 user_command (only checks for quit, anything else just goes)
 
+MILESTONE 3
+Goal: 
+Begin to implement a point/money system. Start with $50. Use “command” to get the user to bet an amount of money. Check against the point total (you can’t bet more than you have). Use “command” to get the user to guess which turtle will win. At the end of the race, check the guess against the winner, and if they match, add the bet to the point total. If they don’t match, subtract the guess. Check the point total against 0. If the point total is less than or equal to zero, game over.
+
+Functions:
+check_winner(guess)
+check_points(current_total)
+eval_points
+get_bet
+get_guess
+Variables:
+user_guess
+user_bet
+current_points
+
+MILESTONE 4
+Goal:
+Write and update the point counter on screen. CHALLENGE: Display the expressions (add or subtract) next to the point count as the point count updates.
+
+Functions:
+write_total
+
+Variables:
+a_turtle
 
