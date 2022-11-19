@@ -47,9 +47,8 @@ MILESTONE 4
 Goal:
 Write and update the point counter on screen. CHALLENGE: Display the expressions (add or subtract) next to the point count as the point count updates.
 
-Functions:
-write_total
-
 Variables:
-a_turtle
+pointturtle
+updateturtle
+
 
