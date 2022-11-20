@@ -51,4 +51,16 @@ Variables:
 pointturtle
 updateturtle
 
+MILESTONE 5
+Goal:
+Random disqualifications. 
+Racers have a low chance of being disqualified from the race. If they are disqualified, regardless of speed, they cannot be the winner.
+
+
+Functions:
+race_go() 
+find_winner()
+rand_disqual()
+Variables:
+disqual_chance
 
