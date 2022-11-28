@@ -71,3 +71,11 @@ Use global variables to access turtle names etc for disqualification and finding
 Functions:
 all?
 
+MILESTONE 7
+Goal:
+Make it prettier, do stylistic changes. 
+Finish line
+Display “game over” (clear screen? Display in middle)
+Starting line
+Race track (lanes)
+
