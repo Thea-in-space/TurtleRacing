@@ -64,3 +64,10 @@ rand_disqual()
 Variables:
 disqual_chance
 
+MILESTONE 6
+Goal:
+Use global variables to access turtle names etc for disqualification and finding the winner and incorporating into all functions that use the names etc….
+
+Functions:
+all?
+
