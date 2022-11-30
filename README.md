@@ -78,6 +78,7 @@ Finish line
 Display “game over” (clear screen? Display in middle)
 Starting line
 Race track (lanes)
+Change it from guessing fastest to watching which is fastest, use time to make them wait before going.
 
 MILESTONE 8
 Goal: 
