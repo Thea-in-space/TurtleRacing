@@ -79,3 +79,6 @@ Display “game over” (clear screen? Display in middle)
 Starting line
 Race track (lanes)
 
+MILESTONE 8
+Goal: 
+Do a new project that is the same but uses steps to make the turtles go at the same time.
