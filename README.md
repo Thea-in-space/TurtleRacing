@@ -1,7 +1,8 @@
 # TurtleRacing
 Gambling on turtle racing. Watch the turtles and bet on the one you think went fastest.
 
-All code in main.py
+Code in main.py
+Alternate race code in alternate_race
 
 MILESTONE 1
 Goal: Get 4 Turtles up and running, going the same distance at randomized speeds every time the program runs.
