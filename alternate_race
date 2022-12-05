@@ -1,0 +1,109 @@
+import random, turtle
+
+wn = turtle.Screen()
+wn.screensize(500, 500)
+trackturt = turtle.Turtle()
+
+
+trackturt.speed(10)
+trackturt.penup()
+trackturt.goto(-140, 140)
+
+inky = turtle.Turtle()
+inky.shape("turtle")
+inky.color("cyan")
+inky.penup()
+inky.setpos(-200, 100)
+ipos = inky.pos()
+
+blinky = turtle.Turtle()
+blinky.shape("turtle")
+blinky.color("red")
+blinky.penup()
+blinky.setpos(-200, 50)
+bpos = blinky.pos()
+
+pinky = turtle.Turtle()
+pinky.shape("turtle")
+pinky.color("pink")
+pinky.penup()
+pinky.setpos(-200, 0)
+ppos = pinky.pos()
+
+clyde = turtle.Turtle()
+clyde.shape("turtle")
+clyde.color("orange")
+clyde.penup()
+clyde.setpos(-200, -50)
+cpos = clyde.pos()
+
+
+racers = [inky, blinky, pinky, clyde]
+
+def get_bet():
+  user_bet = input("How many buttons would you like to bet that you're right? Answer an integer. ")
+  try:
+    true_bet = int(user_bet)
+  except ValueError:
+    print("Bet an integer next time. Your bet has been set to 0.")
+    true_bet = 0
+  if true_bet > points:
+    print("You can't bet more than you have. Your bet has been set to 0.")
+    true_bet = 0
+  return true_bet
+
+def get_guess():
+  valid_guesses = ["cyan", 'red', 'pink', 'orange']
+  user_guess = input("Which color racer do you think will win: cyan, red, pink, or orange? ")
+  if user_guess not in valid_guesses:
+    print("Guess a valid racer next time.")
+    user_guess = None
+  return user_guess
+
+def reset(t1, t2, t3, t4):
+  inky.setpos(ipos)
+  blinky.setpos(bpos)
+  pinky.setpos(ppos)
+  clyde.setpos(cpos)
+
+
+for step in range(14):
+  trackturt.write(step, align = "center")
+  trackturt.right(90)
+  trackturt.forward(10)
+  trackturt.pendown()
+  trackturt.forward(195)
+  trackturt.penup()
+  trackturt.backward(205)
+  trackturt.left(90)
+  trackturt.forward(20)
+
+points = 100
+print("You have 100 buttons to start with. Guess which racer will win! Be careful: the game will end if you hit 0 buttons.")
+raceActive = True
+
+  
+while raceActive:
+  guess = get_guess()
+  bet = get_bet()
+  winner = False
+  while winner == False:
+    for turt in racers:
+          if turt.xcor() > 120:
+            winning_colour = turt.pencolor()
+            winner = True
+            if winning_colour == guess:
+                print(f"You win! The {winning_colour} turtle is the winner.")
+                points = points + bet
+            else:
+                print(f"You lose. The {winning_colour} turtle is the winner.")
+                points = points - bet
+            print(f"You have {points} buttons.")
+            reset(inky, blinky, pinky, clyde)
+          
+          turt.forward(random.randint(1,5))
+  if points <= 0:
+    raceActive = False
+  command = input("Press enter to continue. If finished, type 'quit'. ")
+  if command == "quit":
+    raceActive = False
